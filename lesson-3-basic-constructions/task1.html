@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task1</title>
+</head>
+<body>
+<script>
+  function words() {
+    var stringsearch = /[аоиеёэыуюя]/g;
+    var f = prompt("Vvedite stroky:");
+
+    var k = f.match(stringsearch).length;
+
+    return k ? k : "Net sovpadenyi";
+  }
+
+  console.log(words());
+
+</script>
+</body>
+</html>

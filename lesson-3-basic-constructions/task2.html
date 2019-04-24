@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>anketa</title>
+</head>
+<body>
+<script>
+  var firstname = prompt('Ваша фамилия ?');
+  var lastname = prompt('Ваше имя ?');
+  var secondname = prompt('Ваше отчество');
+  var male = confirm('Вы мужского рода?');
+  var age = +prompt('Сколько вам лет? ');
+
+  alert('Ваше ФИО: ' + firstname + ' ' + lastname + ' ' + secondname +
+    '\n' + 'Ваш возвраст в годах: ' + ' ' + age + '\n' +
+    'Ваш возвраст в днях: ' + ' ' + (age * 365) + '\n' + 'Через 5 лет вам будет: ' + ' ' + (age + 5)
+    + '\n' + 'Ваш пол: ' + ' ' + male);
+
+  var fullname = firstname + ' ' + lastname;
+  var ispension;
+
+  if (age > 60) {
+    ispension = 'Уже на пенсии';
+  } else {
+    ispension = 'Ещё не на пенсии'
+  }
+
+  alert('user:' + ' ' + fullname + ' ' + ispension);
+</script>
+</body>
+</html>
