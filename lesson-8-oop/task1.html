@@ -23,10 +23,10 @@
 
             Question.prototype.checkAnswer = function(ans) {
                 if (ans === this.correct) {
-                    console.log('Правильный ответ!!!');
+                    console.log('И это Правильный ответ!!! (◕‿◕) ');
 
                 } else {
-                    console.log('Ответ неправильный,попробуй снова :)')
+                    console.log('Ответ неправильный,попробуй снова (ಠ_ಠ) ')
                 }
             }
 
@@ -55,7 +55,8 @@
             questions[n].displayQuestion();
 
             setTimeout(function () {
-                var answer = parseInt(prompt('Выберите правильный ответ: '));
+                var answer = parseInt(prompt('Выберите правильный ответ ( ͡° ͜ʖ ͡°) : '));
+                console.log('≧(◕ ‿‿ ◕)≦');
 
                 questions[n].checkAnswer(answer);
             }, 7000);
