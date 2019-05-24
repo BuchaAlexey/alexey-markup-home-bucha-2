@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+<body>
+    <script>
+        function isPal(string){
+            var newstr;
+            var newstrarr;
+            var palidr
+
+            if(typeof string !== "number"){
+                newstr = string.toLowerCase();
+            }else{
+                newstr = string.toString();
+            }
+            newstrarr = newstr.split('');
+            newstr = newstr.replace(/\s/g, '');
+            newstrarr.reverse();
+            palidr = newstrarr.join('').replace(/\s/g, '')
+            if(+palidr !== NaN){
+                +palidr;
+            }
+            if(palidr === newstr){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        console.log(isPal('Anna'));
+        console.log(isPal('А роза упала на лапу Азора'));
+        console.log(isPal('Вася'));
+        console.log(isPal('12321'));
+        console.log(isPal('123212'));
+    </script>
+</body>
+</html>
