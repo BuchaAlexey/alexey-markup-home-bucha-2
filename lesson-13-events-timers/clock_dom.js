@@ -84,4 +84,4 @@ function arrows() {
 }
 
 window.onload = arrows();
-window.setInterval(arrows, 1000); 
+window.setInterval(arrows, 1000);
