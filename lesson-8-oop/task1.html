@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task1</title>
+</head>
+<body>
+    <script>
+        (function() {
+            function Question(question, answers, correct) {
+                this.question = question;
+                this.answers = answers;
+                this.correct = correct;
+            }
+
+            Question.prototype.displayQuestion = function() {
+                console.log(this.question);
+
+                for (var i = 0; i < this.answers.length; i++) {
+                    console.log(i + ': ' + this.answers[i]);
+                }
+            }
+
+            Question.prototype.checkAnswer = function(ans) {
+                if (ans === this.correct) {
+                    console.log('И это Правильный ответ!!! (◕‿◕) ');
+
+                } else {
+                    console.log('Ответ неправильный,попробуй снова (ಠ_ಠ) ')
+                }
+            }
+
+            var q1 = new Question('Эта программа работает??',
+                ['Yes', 'No'],
+                0);
+
+            var q2 = new Question('Как зовут преподавателя этого курса?',
+                ['Алексей', 'Андрей', 'Александр'],
+                2);
+
+            var q3 = new Question('Сколько колёс у легковой машины?',
+                ['шесть', 'два', 'четыре', 'восемь'],
+                2);
+
+            var q4 = new Question('Ольга бузова хорошая певица?',['Yes', 'No'],
+            1)
+
+            var q5 = new Question('Сколько мне лет?;D',['18', '20', '22', '24', '23', '21', '19'],
+                6)
+
+            var questions = [q1, q2, q3, q4, q5];
+
+            var n = Math.floor(Math.random() * questions.length);
+
+            questions[n].displayQuestion();
+
+            setTimeout(function () {
+                var answer = parseInt(prompt('Выберите правильный ответ ( ͡° ͜ʖ ͡°) : '));
+                console.log('≧(◕ ‿‿ ◕)≦');
+
+                questions[n].checkAnswer(answer);
+            }, 7000);
+        })();
+    </script>
+</body>
+</html>

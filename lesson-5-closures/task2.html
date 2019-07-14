@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+<body>
+<script>
+    function addClass(obj, cls) {
+        var classes = obj.className ? obj.className.split(' ') : [];
+        for (var i = 0; i < classes.length; i++) {
+            if (classes[i] == cls) return;
+        }
+        classes.push(cls);
+        obj.className = classes.join(' ');
+    }
+
+    var obj = {
+        className: 'open menu'
+    };
+    addClass(obj, 'new');
+    addClass(obj, 'open');
+    addClass(obj, 'ssadasd');
+    alert(obj.className);
+</script>
+</body>
+</html>
